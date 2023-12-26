@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    tools:context=".MainActivity"
+    android:background="@color/purple">
+
+    <RelativeLayout
+        android:id="@+id/lytProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/imgSearch"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/green"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/baseline_search_24" />
+
+        <EditText
+            android:id="@+id/etvSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_toRightOf="@id/imgSearch"
+            android:background="@color/green"
+            android:hint="SEARCH"
+            android:maxLines="1"
+            android:minHeight="@dimen/_50sdp"
+            android:padding="@dimen/_10sdp" />
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_toRightOf="@id/etvSearch"
+            android:background="@color/green"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/close"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgSearch"
+            android:padding="@dimen/_10sdp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtTotalItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="Total Item 0"
+        android:textSize="@dimen/_40ssp" />
+</RelativeLayout>

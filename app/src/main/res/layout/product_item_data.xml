@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/productCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgProduct"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@drawable/oval"
+                />
+
+            <TextView
+                android:id="@+id/txtproductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Product Name"
+                android:textSize="@dimen/_30sdp"/>
+
+            <TextView
+                android:id="@+id/txtproductDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Product Details"
+                android:textSize="@dimen/_30sdp"/>
+
+            <TextView
+                android:id="@+id/txtproductPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Product Price"
+                android:textSize="@dimen/_30sdp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:text="Add" />
+
+                <Button
+                    android:id="@+id/btnRemove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:text="Remove"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
